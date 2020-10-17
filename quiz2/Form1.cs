@@ -22,17 +22,19 @@ namespace quiz2
         int[,] grassBugTable = new int[8, 8];
         int mode = 2; //1 = grass, 2 = bug
         bool isFull = false;
+        bool isPause = false;
 
         private void button1_Click(object sender, EventArgs e)
         {
             timer1.Start();
+            isPause = false;
         }
 
         private void pictureBox1_MouseClick(object sender, MouseEventArgs e)
         {
             int dx = e.X / (pictureBox1.Width / 8);
             int dy = e.Y / (pictureBox1.Height / 8);
-            if (mode == grassBugTable[dx,dy])
+            if (mode == grassBugTable[dx,dy] && isPause == false)
             {
                 grassBugTable[dx, dy] = 0;
             }
@@ -99,6 +101,7 @@ namespace quiz2
         private void button2_Click(object sender, EventArgs e)
         {
             timer1.Stop();
+            isPause = true;
         }
 
         private void button3_Click(object sender, EventArgs e)

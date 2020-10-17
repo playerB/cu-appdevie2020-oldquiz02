@@ -107,14 +107,12 @@ namespace quiz2
             {
                 mode = 2;
                 label1.Text = "ยาฆ่าแมลง";
-                label1.ForeColor = Color.Yellow;
                 button3.Text = "เปลี่ยนเป็นยาฆ่าหญ้า";
             }
             else if (mode == 2)
             {
                 mode = 1;
                 label1.Text = "ยาฆ่าหญ้า";
-                label1.ForeColor = Color.Green;
                 button3.Text = "เปลี่ยนเป็นยาฆ่าแมลง";
             }
         }
